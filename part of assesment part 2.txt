@@ -1,0 +1,11 @@
+First Page is Hi- fi page other three pages are lo-fi
+color scheme:
+background: 00000
+boxes: C4C4C4
+text:00000,FFFFFF,
+typography:Rammetto One italics,Roboto Condensed
+3 or 4 photos used
+https://www.figma.com/file/GMlfYiOKvugSsi8isApCQ8/Untitled?node-id=7%3A14
+
+extra credit assignment:
+https://docs.google.com/document/d/1a_I_d0WfzT8bJhGvprnyHU3whdfNtjHTP0DVZluCc10/edit?usp=sharing
