@@ -35,11 +35,9 @@ const cart = [
 
 //CODE HERE
 
-let sum = cart.reduce((acc, val) => {
-    return val.name == 'pizza' ? acc : acc + val.price;
-  }, 0);
-console.log(sum)
-// really dont know if i did it right
+let totalPrice = cart.reduce((acc, val) => {return acc + val.price}, 0);
+console.log(` The subtotal was ${totalPrice}`)
+// corrected
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -56,16 +54,14 @@ console.log(sum)
 */
 
 //CODE HERE
-const calcFinalPrice = (cartTotal, couponValue, tax) => {
-    if (num1 > num2) {
-        return num1
-    } else {
-        return num2
-    }
-}
-
-
-const compareNums = (num1, num2) => num1 > num2 ? num1 : num2
+   const calcFinalPrice = (cartTotal, couponValue, tax) => {
+     let groceryBill = cartTotal * tax;
+     let groceryFinBill = groceryBill - couponValue;
+     return groceryFinBill + cartTotal;
+   }
+   console.log(calcFinalPrice(10.52,2.06,0.6));
+// had to get the total amount it kept giving me for instead of close to $15 dollars
+// corrected
 
 
 
@@ -93,22 +89,26 @@ const compareNums = (num1, num2) => num1 > num2 ? num1 : num2
     TEXT ANSWER HERE
   
 */
-const explObject = {
-    name : 'guest name because you need to identify and (string)',
-    bDayYear: 'to verify if guest is over the age of 21 and (number)',
-    ccInfo: 'so customers can pay for food and (number)',
-    expDateCc = ' to make sure guest doesnt come with faulty cards and (number)',
-    mealAndDrink: 'because you can suggest their favorite meal when the come and (string and array)',
+ const explObject = {
+  name : 'guest name because you need to identify and (string)',
+  bDayYear: 'to verify if guest is over the age of 21 and (number)',
+  ccInfo: 'so customers can pay for food and (number)',
+  expDateCc :' to make sure guest doesnt come with faulty cards and (number)',
+  mealAndDrink: 'because you can suggest their favorite meal when the come and (string and array)',
 }
-/*
-    Now, create a customer object following your own
-    guidelines.
-*/
-//CODE HERE
+console.log(explObject)
+// corrected
+// /*
+//     Now, create a customer object following your own
+//     guidelines.
+// */
+// //CODE HERE
 const customerObject = {  
     name : 'lisa',
-   bDayYear: 1991,
-   ccInfo: 1234567891011,
-   expDateCc = 1234,
-   mealAndDrink: ['coke','shrimp pasta','salad']
-}
+    bDayYear: 1991,
+     ccInfo: 1234567891011,
+    expDateCc : 1234,
+     mealAndDrink: ['coke','shrimp pasta','salad'],
+ }
+ console.log(customerObject);
+ 

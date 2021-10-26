@@ -198,7 +198,15 @@ console.log(filteredFood);
 */
 
 //CODE HERE
-const filterByProperty = (property, number, type) => {}
+const filterByProperty = (property, number, type) => {
+    if (property === number) {
+    console.log('above')
+} else if (property === type){
+    console.log('below standards')
+
+}
+}
+console.log(filterByProperty('pizza', 4 ,3))
 
 /*
     Invoke the `filterByProperty` function passing
@@ -208,3 +216,5 @@ const filterByProperty = (property, number, type) => {}
 */
 
 //CODE HERE
+
+//corrected

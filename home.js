@@ -51,18 +51,27 @@ let userInput = console.log(greetUser('Welcome back' +' Dana'));
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-function canWeDeliver(zipcode) {
-    for (let i = 0; i < deliveryAreaZipCodes.length; i++){
-      if (deliveryAreaZipCodes[i] === zipcode){
-         console.log(String(`You're in our delivery zone!`)) 
-      } else if(deliveryAreaZipCodes[i] != zipcode){
-          console.log(String( `Sorry, we can't deliver to that address`))
-      }   else { zipcode.include(deliveryAreaZipCodes[i]);
-      }  
-  }
-  }
-  let deliveryZone = console.log(canWeDeliver(85205));
-  deliveryZone = console.log(deliveryAreaZipCodes.includes(85205))
+function canWeDeliver (zipcode) {
+    if (zipcode === 85205){
+       console.log('Youre in our delivery zone!')
+    } else if (zipcode === 85204){
+        console.log('Youre in our delivery zone!')
+    } else if (zipcode === 85203) {
+        console.log('Youre in our delivery zone!') 
+    } else if (zipcode === 85213){
+        console.log('Youre in our delivery zone!') 
+    } else if (zipcode === 85206){
+        console.log('Youre in our delivery zone!')
+    } else {
+        console.log(`Sorry, we can't deliver to that address`)
+    }
+}
+ function expressdelivery(zicode){
+     return deliveryAreaZipCodes.includes(zicode);
+}
+let deliveryZone = console.log(deliveryAreaZipCodes.includes(85205))
+console.log(canWeDeliver(70119))
+// corrected
 // i dont know for some odd reason each zipcode works but for some reason i tried everything to print out just one line of code but it did not do that, didnt know how to do it
 /* 
     Problem 2 Continued
@@ -82,22 +91,19 @@ function canWeDeliver(zipcode) {
 */
 
 // CODE HERE
-canWeDeliverTwo = (zipcodes,cb) => {
+function canWeDeliverTwo(zipcodes) {
     for (let i = 0; i < deliveryAreaZipCodes; i++) {
-        for (let j= i + 1; j < deliveryAreaZipCodes.length; j++) {
-            if (arr[j] === arr[j]) {
-                arr.splice(j, 1)
-                j--;
-            }if (deliveryAreaZipCodes[i][j] === zipcodes){
+            }if (deliveryAreaZipCodes === zipcodes){
          console.log(String(`You're in our delivery zone!`)) 
-      } else if(deliveryAreaZipCodes[i][j] != zipcodes){
+      } else if(deliveryAreaZipCodes != zipcodes){
           console.log(String( `Sorry, we can't deliver to that address`))
       }     
-        }
-    }
-    cb(zipcodes)
 }
-const each = (zipcodes) => zipcodes.forEach((i, j) => cb(i, j))
+const eachZipcode = (zipcode) => deliveryAreaZipCodes.forEach(zipcode)
+console.log(canWeDeliverTwo(70119))
+
+
+//corected tried to coorect it kept giving error message
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -132,8 +138,9 @@ const deals = [
 */
 
 //CODE HERE
-deals.splice(0,1,'10%off')
-const dealsTwo = deals.map(item => item.title);
+deals[0].title = deals[0].title.replace('15% Off!','10% Off!');
+console.log(deals[0].title);
+//corected
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -148,6 +155,6 @@ const dealsTwo = deals.map(item => item.title);
 */
 
 //CODE HERE
-//const dealsPlus = deals.map(item => item.desc);
-//deals.splice(1,1,'This deal lasts until the end of april!')
-//deals.trim()
+deals[1].desc = deals[1].desc.trim().replace(' This deal lasts until the end of march! ','This deal lasts until the end of April! ')
+console.log(deals[1].desc);
+// dont know why i think i wrote the code right but im still getting an error but corected
